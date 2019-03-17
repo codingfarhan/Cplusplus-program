@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+int main()
+{
+int fib0=0, fib1=1, fib2=1, i;
+cout<<"how many numbers of the series do you want to print?"<<endl;
+cin>>i;
+for(int y=0; y<i; y++)
+{
+fib2=fib1+fib0;
+fib1=fib0;
+fib0=fib2;
+cout<<fib2<<"\t";
+}
+getch();
+}

@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+int main()
+{
+float x;
+cout<<"enter any number"<<endl;
+cin>>x;
+float f=sqrt(x);
+cout<<f;
+getch();
+return 0;
+}

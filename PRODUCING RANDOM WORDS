@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void main()
+{
+char c;
+int k, g;
+unsigned int l;
+time_t t;
+l=(unsigned)time(&t);
+srand(l);
+cout<<"How many letters do you want your randomly generated word to contain?"<<"\n"<<"\n";
+cin>>g;
+
+for(int i=0; i<g; i++)
+{
+c=rand()%26+'a';
+cout<<c;
+}
+
+getch();
+}

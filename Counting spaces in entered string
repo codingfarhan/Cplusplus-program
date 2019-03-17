@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+int main()
+{
+clrscr();
+char a[30];
+int i, count=0;
+cout<<"enter a word"<<endl;
+gets(a);
+for(i=0; a[i]!='\0'; i++)
+{
+if (a[i]== ' ')
+count=count++;
+}
+cout<<"there are "<<count<<" spaces in the types sentence."<<endl;
+getch();
+}

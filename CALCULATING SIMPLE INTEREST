@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+int main()
+{
+int r, t, p;
+cout<<"enter time period (in years)"<<endl;
+cin>>t;
+cout<<"enter rate of interest"<<endl;
+cin>>r;
+cout<<"enter principal amount"<<endl;
+cin>>p;
+int si=(p*r*t)/100;
+cout<<"The simple interest wil be "<<si;
+getch();
+}

@@ -1,0 +1,48 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+struct emp
+{ int age;
+  char name[40];
+  char desig[40];
+  char empid[50];
+}c[50];
+int main()
+{   clrscr();
+    int i=0, count=0, k=0; char ch;
+do                                            //taking emp details
+{
+  cout<<"Enter enployee name"<<endl;
+  gets(c[i].name);
+  cout<<"Enter employee ID"<<endl;
+  gets(c[i].empid);
+  cout<<"Eenter employee designation"<<endl;
+  gets(c[i].desig);
+  cout<<"Enter the employee age"<<endl;
+  cin>>c[i].age;
+  cout<<"wnat to enter information of more employees? (y/n)"<<endl;
+  cin>>ch;
+  k++;
+  if (ch=='y')
+  { count=0;
+   i++; }
+  else
+   break;
+} while(count=1);
+
+for(i=0; i<k; i++)                            //displaying employee info
+{
+  cout<<"\n"<<"\n"<<"EMPLOYEE DETAILS OF ";
+  puts(c[i].name);
+  cout<<"\n"<<"Employee's Name: ";
+  puts(c[i].name);
+  cout<<"\n"<<"Employee's ID: ";
+  puts(c[i].empid);
+  cout<<"\n"<<"Employee's designation: ";
+  puts(c[i].desig);
+  cout<<"\n"<<"Employee's age: ";
+  cout<<c[i].age;
+  cout<<"\n";
+}
+getch();
+}

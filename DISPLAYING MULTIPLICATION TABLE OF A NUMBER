@@ -1,0 +1,25 @@
+#include<iostream.h>
+#include<conio.h>
+
+void tables(int a)
+{
+  int i;
+
+  for(i=1; i<11; i++)
+  {
+    cout<<a<<" multiplied with "<<i<<" equals "<<i*a<<endl;
+  }
+
+}
+
+int main()
+{
+ int k;
+
+ cout<<"enter any nuumber to view it's table "<<endl;
+ cin>>k;
+
+ tables(k);
+
+ getch();
+}

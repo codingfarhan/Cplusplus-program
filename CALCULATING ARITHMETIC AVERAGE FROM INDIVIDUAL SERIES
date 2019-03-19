@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+  int val[100], k, u, j=0;
+  float avg;
+
+  cout<<"how many values do you want to enter? (max 100)"<<endl;
+  cin>>u;
+  cout<<"enter the individual series values "<<endl;
+  for(k=0; k<u; k++)
+  {
+    cin>>val[k];
+  }
+
+  for(k=0; k<u; k++)
+  {
+    j+=val[k];
+  }
+  avg=j/u;
+
+  cout<<"Approximate Arithmetic average of the entered individual series is: "<<endl;
+  cout<<avg;
+
+  getch();
+}

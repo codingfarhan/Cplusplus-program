@@ -1,0 +1,102 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+#include<process.h>
+
+int main()
+{
+  int choice, num, j[99], l=0, count, k;
+
+do
+{
+
+  cout<<"WELCOME TO THE SIMPLE ARITHMETIC CALCULATOR"<<endl;
+  cout<<"enter the number corresponding to the arithmetic operation you want to perform"<<endl;
+  cout<<"1. Addition"<<endl<<"2. Subtraction"<<endl<<"3. Multiplication"<<endl<<"4. Division"<<endl<<"5. Exponent"<<endl;
+  cin>>choice;
+
+  switch(choice)
+  {
+    case 1:  cout<<"how many numbers do you want to perform operation on?"<<endl;
+	     cin>>num;
+
+	     cout<<"enter the numbers"<<endl;
+
+	     for(k=0; k<num; k++)
+	     {
+	       cin>>j[k];
+	     }
+
+	    for(k=0; k<num; k++)
+	    {
+	      l+=j[k];
+	    }
+	    cout<<"addition of numbers is: "<<l<<endl;
+	    break;
+
+    case 2:  cout<<"how many numbers do you want to perform operation on?"<<endl;
+	     cin>>num;
+
+	     cout<<"enter the numbers"<<endl;
+	     for(k=0; k<num; k++)
+	     {
+	       cin>>j[k];
+	     }
+
+	    for(k=0; k<num; k++)
+	    {
+	      l-=j[k];
+	    }
+	    cout<<"subtraction of numbers is: "<<l<<endl;
+	    break;
+
+    case 3:  cout<<"how many numbers do you want to perform operation on?"<<endl;
+	     cin>>num;
+
+	     cout<<"enter the numbers"<<endl;
+	     for(int k=0; k<num; k++)
+	     {
+	       cin>>j[k];
+	     }
+
+	    for(k=0; k<num; k++)
+	    {
+	      l*=j[k];
+	    }
+	    cout<<"multiplication of numbers is: "<<l<<endl;
+	    break;
+
+    case 4: int g, p;
+	    cout<<"enter the dividend"<<endl;
+	    cin>>g;
+	    cout<<"enter the divisor"<<endl;
+	    cin>>p;
+	    cout<<"the quotient after division is: "<<g/p<<endl;
+	    break;
+
+    case 5: int h, h2;
+	    cout<<"enter the number whose exponent form is to be calculated"<<endl;
+	    cin>>h;
+
+	    cout<<"enter power of "<<h<<" you want to find"<<endl;
+	    cin>>h2;
+
+	    int u=pow(h,h2);
+	    cout<<h<<" to the power "<<h2<<" is "<<u<<endl;
+	    break;
+
+    default: cout<<"you've entered the wrong number!"<<endl;
+	     break;
+    }
+
+    char ch;
+    cout<<"Want to use the calculator again? (y/n)"<<endl;
+    cin>>ch;
+
+    if (ch=='y')
+    count=1;
+    else exit(0);
+}while(count>0);
+
+getch();
+}

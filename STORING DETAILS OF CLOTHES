@@ -1,0 +1,78 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+class clothing
+{
+   char code[99], type[99], material[99];
+   int size;
+   float price;
+
+   void  calc_price(char material[99], char type[99])
+   {
+     if (strcmp(strupr(material),"COTTON")==0)
+     {
+      if (strcmp(strupr(type),"TROUSER")==0)
+      price=1500;
+      else if (strcmp(strupr(type), "SHIRT")==0)
+      price=1200;
+     }
+     else if (strcmp(strupr(material),"COTTON")==1)
+     price=price/4;
+   }
+   public:
+
+   clothing()
+   {
+     strcpy(code,"NOT ASSIGNED");
+     strcpy(type,"NOT ASSIGNED");
+     strcpy(material,"NOT ASSIGNED");
+     size=0;
+     price=0;
+   }
+
+   void enter()
+   {
+
+      cout<<"enter code"<<endl;
+      gets(code);
+      cout<<"enter type of cloth (trouser or shirt)"<<endl;
+      gets(type);
+      cout<<"enter size"<<endl;
+      cin>>size;
+      cout<<"enter material of cloth"<<endl;
+      gets(material);
+      calc_price(material, type);
+   }
+
+      void show()
+      {
+	cout<<"code: ";
+	puts(code);
+	cout<<"type: ";
+	puts(type);
+	cout<<"size: "<<size;
+	cout<<"material: ";
+	puts(material);
+	cout<<"price: "<<price<<endl;
+      }
+};
+
+int main()
+{
+  clrscr();
+  char k;
+  clothing ob;
+
+  cout<<"welcome, please enter the details as asked to register the cloth"<<endl;
+  ob.enter();
+  cout<<"great! now do you want to view the cloth details? (y/n)"<<endl;
+  cin>>k;
+  if (toupper(k)=='Y')
+  ob.show();
+  getch();
+}
+
+
+
